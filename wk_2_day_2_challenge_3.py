@@ -7,9 +7,12 @@ animals =  {'Lion': 'Cub', 'Cat': 'Kitten', 'Dog': 'puppy', 'Sheep': 'Lamb', 'Ge
 
 user_input = input("please enter an animal name   ")
 
+ExistsFlag = False
+
 for i in animals:
     if i == user_input:
         print(animals.get(i))
-        if i != user_input:
-            print("animal not found")
-
+        ExistsFlag = True
+    
+if ExistsFlag == False:
+    print("animal not in list")
